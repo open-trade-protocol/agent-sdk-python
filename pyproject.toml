@@ -1,24 +1,31 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "opentrade"
-version = "0.1.0-draft"
-description = "Python client for the OpenTrade Protocol - AI agent commerce SDK"
+name = "opentrade-sdk"
+version = "0.1.0"
+description = "Python SDK for the OpenTrade Protocol — AI agent commerce client"
 requires-python = ">=3.10"
-license = {text = "Apache-2.0"}
-keywords = [
-    "opentrade",
-    "protocol",
-    "ai-agent",
-    "commerce",
-    "marketplace",
-    "escrow",
-    "negotiation",
-    "federated",
+license = { text = "Apache-2.0" }
+dependencies = [
+    "httpx>=0.27.0",
+    "pydantic>=2.9.0",
 ]
-authors = [
-    {name = "OpenTrade Protocol Team", email = "dev@opentradeprotocol.com"},
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "ruff>=0.2.0",
 ]
 
 [project.urls]
 Homepage = "https://opentradeprotocol.com"
-Documentation = "https://opentradeprotocol.com/docs"
-Repository = "https://github.com/open-trade-protocol/agent-sdk"
+Repository = "https://github.com/open-trade-protocol/agent-sdk-python"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+
+[tool.setuptools.packages.find]
+where = ["src"]
