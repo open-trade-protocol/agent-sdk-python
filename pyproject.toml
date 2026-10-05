@@ -1,0 +1,24 @@
+[project]
+name = "opentrade"
+version = "0.1.0-draft"
+description = "Python client for the OpenTrade Protocol - AI agent commerce SDK"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+keywords = [
+    "opentrade",
+    "protocol",
+    "ai-agent",
+    "commerce",
+    "marketplace",
+    "escrow",
+    "negotiation",
+    "federated",
+]
+authors = [
+    {name = "OpenTrade Protocol Team", email = "dev@opentradeprotocol.com"},
+]
+
+[project.urls]
+Homepage = "https://opentradeprotocol.com"
+Documentation = "https://opentradeprotocol.com/docs"
+Repository = "https://github.com/open-trade-protocol/agent-sdk"
